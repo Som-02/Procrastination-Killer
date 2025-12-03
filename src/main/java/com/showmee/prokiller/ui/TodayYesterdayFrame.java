@@ -87,7 +87,7 @@ public class TodayYesterdayFrame extends JFrame {
         headerRow.setBackground(new Color(18, 18, 30));
         headerRow.setBorder(BorderFactory.createEmptyBorder(10, 20, 0, 20));
 
-        headerRow.add(new JLabel("")); // empty corner
+        headerRow.add(new JLabel("")); 
 
         JLabel todayHeader = new JLabel("Today", SwingConstants.CENTER);
         todayHeader.setForeground(new Color(88, 189, 255));
@@ -108,4 +108,5 @@ public class TodayYesterdayFrame extends JFrame {
         add(centerPanel, BorderLayout.CENTER);
     }
 }
+
 
