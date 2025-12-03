@@ -1,3 +1,10 @@
+/**
+ * Procrastination Killer
+ * Created by: Somnath Pal
+ * Year: 2025
+ *
+ * This project is developed by Somnath Pal. All rights reserved.
+ */
 package com.showmee.prokiller.ui;
 
 import com.showmee.prokiller.storage.ActivityStorage;
@@ -101,3 +108,4 @@ public class TodayYesterdayFrame extends JFrame {
         add(centerPanel, BorderLayout.CENTER);
     }
 }
+
