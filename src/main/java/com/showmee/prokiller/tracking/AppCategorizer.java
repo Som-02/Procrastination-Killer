@@ -15,10 +15,8 @@ public class AppCategorizer {
         if (processName == null) processName = "";
         if (windowTitle == null) windowTitle = "";
 
-        // Combine both, just in case processName is empty
         String text = (processName + " " + windowTitle).toLowerCase();
 
-        // IDEs / coding / docs => PRODUCTIVE
         if (text.contains("netbeans") ||
             text.contains("intellij") ||
             text.contains("idea") ||
@@ -38,7 +36,6 @@ public class AppCategorizer {
             return AppCategory.PRODUCTIVE;
         }
 
-        // Learning sites => PRODUCTIVE
         if (text.contains("geeksforgeeks") ||
             text.contains("leetcode") ||
             text.contains("hackerrank") ||
@@ -50,8 +47,6 @@ public class AppCategorizer {
         ) {
             return AppCategory.PRODUCTIVE;
         }
-
-        // Entertainment => WASTE
         if (text.contains("youtube") ||
             text.contains("netflix") ||
             text.contains("prime video") ||
@@ -67,9 +62,9 @@ public class AppCategorizer {
             return AppCategory.WASTE;
         }
 
-        // Default: neutral
         return AppCategory.NEUTRAL;
     }
 }
+
 
 
