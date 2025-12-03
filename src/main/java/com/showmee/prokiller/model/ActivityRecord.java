@@ -16,7 +16,7 @@ public class ActivityRecord {
     private LocalDateTime endTime;
     private String windowTitle;
     private String processName;
-    private AppCategory category;   // <-- IMPORTANT: AppCategory, not int
+    private AppCategory category; 
 
     public ActivityRecord() {
     }
@@ -65,11 +65,11 @@ public class ActivityRecord {
         this.processName = processName;
     }
 
-    public AppCategory getCategory() {       // <-- returns AppCategory
+    public AppCategory getCategory() {   
         return category;
     }
 
-    public void setCategory(AppCategory category) {  // <-- takes AppCategory
+    public void setCategory(AppCategory category) { 
         this.category = category;
     }
 
@@ -78,4 +78,5 @@ public class ActivityRecord {
         return Duration.between(startTime, endTime).getSeconds();
     }
 }
+
 
