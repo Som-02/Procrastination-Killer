@@ -1,3 +1,10 @@
+/**
+ * Procrastination Killer
+ * Created by: Showmee
+ * Year: 2025
+ *
+ * This project is developed by Showmee. All rights reserved.
+ */
 package com.showmee.prokiller.tracking;
 
 import com.sun.jna.Native;
@@ -26,3 +33,4 @@ public class ActiveWindowUtil {
         return new ActiveWindowInfo(title, processName);
     }
 }
+
