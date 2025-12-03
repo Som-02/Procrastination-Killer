@@ -1,3 +1,10 @@
+/**
+ * Procrastination Killer
+ * Created by: Showmee
+ * Year: 2025
+ *
+ * This project is developed by Showmee. All rights reserved.
+ */
 package com.showmee.prokiller.tracking;
 
 import com.showmee.prokiller.model.ActivityRecord;
@@ -83,3 +90,4 @@ public class ActivityTracker {
         return new ArrayList<>(records);
     }
 }
+
