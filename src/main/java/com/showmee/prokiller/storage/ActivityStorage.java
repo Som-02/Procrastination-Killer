@@ -31,9 +31,7 @@ public class ActivityStorage {
             + java.io.File.separator + "ProcrastinationKiller"
             + java.io.File.separator + "logs";
 }
-    /**
-     * Save one tracking session to a CSV file under /logs.
-     */
+    
     public static void saveSession(List<ActivityRecord> records) {
         if (records == null || records.isEmpty()) {
             return; // nothing to save
@@ -82,7 +80,6 @@ public class ActivityStorage {
             e.printStackTrace();
         }
     }
-    // ---- Daily summary support ----
 
     public static class DailySummary {
         public long prodSec = 0;
@@ -117,8 +114,6 @@ public class ActivityStorage {
         try (var lines = Files.lines(file)) {
             lines.skip(1).forEach(line -> {
                 try {
-                    // line format:
-                    // start,end,"title","process",category,durationSeconds
 
                     int firstComma = line.indexOf(',');
                     if (firstComma < 0) return;
@@ -141,7 +136,6 @@ public class ActivityStorage {
                     if (prevComma < 0) return;
                     String categoryStr = rest.substring(prevComma + 1).trim();
 
-                    // remove optional quotes
                     categoryStr = categoryStr.replace("\"", "");
 
                     AppCategory cat;
@@ -158,7 +152,6 @@ public class ActivityStorage {
                     }
 
                 } catch (Exception ex) {
-                    // ignore bad line
                 }
             });
         } catch (IOException e) {
@@ -166,16 +159,15 @@ public class ActivityStorage {
         }
     }
 
-    // keep this for compatibility if you ever want it
     public static void saveAll(List<ActivityRecord> records) {
         saveSession(records);
     }
 
-    // escape quotes inside text for CSV
     private static String escape(String s) {
         if (s == null) return "";
         return s.replace("\"", "''");
     }
 }
+
 
 
