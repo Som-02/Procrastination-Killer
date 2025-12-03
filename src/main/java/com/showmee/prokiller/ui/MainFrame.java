@@ -70,13 +70,11 @@ public class MainFrame extends javax.swing.JFrame {
         btn.setContentAreaFilled(true);
     }
 private void configureLayout() {
-    // Root panel with vertical layout
     JPanel root = new JPanel();
     root.setBackground(new Color(20, 20, 35));
     root.setLayout(new BoxLayout(root, BoxLayout.Y_AXIS));
     root.setBorder(new EmptyBorder(40, 40, 40, 40));
 
-    // Center all components horizontally
     jLabel1.setAlignmentX(Component.CENTER_ALIGNMENT);
     jLabel2.setAlignmentX(Component.CENTER_ALIGNMENT);
     jLabel3.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -85,25 +83,24 @@ private void configureLayout() {
     jButton2.setAlignmentX(Component.CENTER_ALIGNMENT);
     jButton3.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-    // Build vertical ordering with spacing
     root.add(jLabel1);
     root.add(Box.createVerticalStrut(60));
 
-    root.add(jLabel3); // Waste
+    root.add(jLabel3); 
     root.add(Box.createVerticalStrut(5));
-    root.add(jLabel2); // Productive
+    root.add(jLabel2);
     root.add(Box.createVerticalStrut(10));
     root.add(jProgressBar1);
 
     root.add(Box.createVerticalStrut(60));
 
-    root.add(jButton3); // Start/Stop
+    root.add(jButton3); 
     root.add(Box.createVerticalStrut(10));
-    root.add(jButton1); // Detailed stats
+    root.add(jButton1); 
     root.add(Box.createVerticalStrut(10));
-    root.add(jButton2); // Today vs Yesterday
+    root.add(jButton2); 
 
-    setContentPane(root);   // replace the old GroupLayout content pane
+    setContentPane(root);  
     pack();
 }
 private void applyTheme() {
@@ -144,19 +141,17 @@ private void styleButton(JButton btn, Color accent) {
 }
 
     public MainFrame() {
-    initComponents();          // NetBeans creates all components
+    initComponents();   
 
     setLocationRelativeTo(null);
 
-    // build our own layout instead of the auto GroupLayout
     configureLayout();
     applyTheme();
-    setSize(500, 500);                          // overall window size
-    setMinimumSize(new java.awt.Dimension(500, 530));  // don't let it shrink smaller
+    setSize(500, 500);   
+    setMinimumSize(new java.awt.Dimension(500, 530)); 
     jButton3.setText("Start Tracking");
     jButton2.setText("Today vs Yesterday");
 
-    // tracker + callbacks
     tracker = new ActivityTracker(records -> {
         currentRecords = records;
         javax.swing.SwingUtilities.invokeLater(this::updateDashboard);
