@@ -41,7 +41,6 @@ public class StatsFrame extends JFrame {
 
     populateTable(records);
 
-    // 👉 Add this
     applyTheme(scrollPane);
 }
 
@@ -58,14 +57,11 @@ private void applyTheme(JScrollPane scrollPane) {
     Color textSecondary = new Color(200, 200, 210);
     Color accent = new Color(88, 101, 242);
 
-    // Frame background
     getContentPane().setBackground(bg);
 
-    // Scroll pane background
     scrollPane.getViewport().setBackground(cardBg);
     scrollPane.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 
-    // Table body
     table.setBackground(cardBg);
     table.setForeground(Color.WHITE);
     table.setFont(new Font("Segoe UI", Font.PLAIN, 13));
@@ -76,12 +72,10 @@ private void applyTheme(JScrollPane scrollPane) {
     table.setSelectionBackground(new Color(70, 85, 200));
     table.setSelectionForeground(Color.WHITE);
 
-    // Center last column (Productivity %)
     DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
     centerRenderer.setHorizontalAlignment(DefaultTableCellRenderer.CENTER);
     table.getColumnModel().getColumn(5).setCellRenderer(centerRenderer);
 
-    // Header styling
     JTableHeader header = table.getTableHeader();
     header.setBackground(new Color(25, 25, 45));
     header.setForeground(Color.BLACK);
@@ -126,7 +120,7 @@ private void applyTheme(JScrollPane scrollPane) {
         DefaultTableModel model = new DefaultTableModel(columns, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return false; // read-only
+                return false; 
             }
         };
 
@@ -159,4 +153,5 @@ private void applyTheme(JScrollPane scrollPane) {
     }
     
 }
+
 
