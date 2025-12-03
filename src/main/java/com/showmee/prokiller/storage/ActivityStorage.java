@@ -1,9 +1,9 @@
 /**
  * Procrastination Killer
- * Created by: Showmee
+ * Created by: Somnath Pal
  * Year: 2025
  *
- * This project is developed by Showmee. All rights reserved.
+ * This project is developed by Somnath Pal. All rights reserved.
  */
 package com.showmee.prokiller.storage;
 
@@ -177,4 +177,5 @@ public class ActivityStorage {
         return s.replace("\"", "''");
     }
 }
+
 
