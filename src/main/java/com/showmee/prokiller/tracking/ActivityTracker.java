@@ -42,7 +42,7 @@ public class ActivityTracker {
     }
 
     private void loop() {
-    final int INTERVAL_MS = 5000; // 5 seconds
+    final int INTERVAL_MS = 5000; 
 
     ActiveWindowInfo lastInfo = null;
     java.time.LocalDateTime lastTime = java.time.LocalDateTime.now();
@@ -90,5 +90,6 @@ public class ActivityTracker {
         return new ArrayList<>(records);
     }
 }
+
 
 
