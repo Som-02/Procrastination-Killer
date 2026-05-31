@@ -15,7 +15,6 @@ A Windows desktop productivity tool built in Java that tracks your active applic
 - [Install via Installer](#install-via-installer)
 - [How It Works](#how-it-works)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
