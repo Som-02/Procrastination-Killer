@@ -2,7 +2,7 @@
 
 A Windows desktop productivity tool built in Java that tracks your active application usage in real time — helping you stay aware of where your time actually goes and cut out distractions.
 
-![App Screenshot](Capture1.png)![App Screenshot](Capture2.png)
+![App Screenshot](Capture2.png)
 ---
 
 ## 📋 Table of Contents
